@@ -18,7 +18,8 @@ def inorder(node):
 
 # 전역변수
 root = None
-groupList = ['블랙핑크', '레드벨벳', '마마무', '에이핑크', '걸스데이', '트와이스']
+# groupList = ['블랙핑크', '레드벨벳', '마마무', '에이핑크', '걸스데이', '트와이스']
+groupList = input('그룹입력 >> ').split()
 
 # 메인코드
 node = TreeNode()
@@ -79,7 +80,7 @@ curr = root
 parent = None
 
 while True:
-    if deleteName == curr.data: # 살제할 데이터를 찾았으면
+    if deleteName == curr.data: # 삭제할 데이터를 찾았으면
         if curr.left == None and curr.right == None: # 리프노드라 삭제가 쉬움
             if parent.left == curr: # 내가 부모의 왼쪽에 붙어있으면
                 parent.left = None
